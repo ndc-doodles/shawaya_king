@@ -205,125 +205,51 @@ header a{
         opacity: 1;
     }
 }
-/* ================= RESPONSIVE SYSTEM ================= */
 
-/* ---------- Large Screens (1440px+) ---------- */
-@media (min-width: 1440px) {
-    .carousel .list .item .content {
-        top: 32%;
-        max-width: 1100px;
-    }
-
-    .carousel .list .item .title {
-        font-size: 5.2rem;
-    }
-}
-
-/* ---------- Laptops & Tablets Landscape ---------- */
-@media (max-width: 1200px) {
-    .carousel .list .item .content {
-        top: 34%;
-        padding-right: 20%;
-    }
-
-    .carousel .list .item .title {
-        font-size: 4.2rem;
-    }
-}
-
-/* ---------- Tablets & Small Laptops ---------- */
-@media (max-width: 992px) {
-    .carousel {
-        height: 85vh;
-    }
-
-    .carousel .list .item {
-        height: 85vh;
-    }
-
-    .carousel .list .item .content {
-        top: 30%;
+/* ================= MOBILE ================= */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
         padding-right: 0;
-        max-width: 90%;
+        top: 50%;
     }
 
-    .carousel .list .item .title {
-        font-size: 3.6rem;
-    }
-
-    .carousel .list .item .buttons {
-        grid-template-columns: repeat(2, 150px);
-    }
-
-    .thumbnail .item {
-        width: 120px;
-        height: 170px;
-    }
-}
-
-/* ---------- Mobile Devices ---------- */
-@media (max-width: 768px) {
-    .carousel {
-        height: 78vh;
-        min-height: 520px;
-    }
-
-    .carousel .list .item {
-        height: 78vh;
-    }
-
-    .carousel .list .item .content {
-        top: 26%;
-        max-width: 92%;
-        text-align: left;
-    }
-
-    .carousel .list .item .title {
+    .carousel .list .item .title{
         font-size: 2.8rem;
     }
 
-    .carousel .list .item .buttons {
+    .carousel .list .item .buttons{
         grid-template-columns: 1fr;
         width: 220px;
     }
+}
 
-    .thumbnail {
-        bottom: 16px;
+@media (max-width: 768px){
+    .carousel .list .item .content{
+        top: 30%;
+    }
+}
+
+/* ===== Mobile Thumbnail Resize ===== */
+@media (max-width: 768px) {
+    .thumbnail{
+        bottom: 20px;
         gap: 10px;
     }
 
-    .thumbnail .item {
+    .thumbnail .item{
         width: 90px;
         height: 130px;
     }
 
-    .thumbnail .item img {
+    .thumbnail .item img{
         border-radius: 14px;
     }
 }
 
-/* ---------- Small Phones ---------- */
+/* Extra small phones */
 @media (max-width: 480px) {
-    .carousel {
-        height: 72vh;
-        min-height: 480px;
-    }
-
-    .carousel .list .item .content {
-        top: 24%;
-    }
-
-    .carousel .list .item .title {
-        font-size: 2.3rem;
-    }
-
-    .carousel .list .item .author {
-        font-size: 11px;
-        letter-spacing: 4px;
-    }
-
-    .thumbnail .item {
-        width: 72px;
-        height: 105px;
+    .thumbnail .item{
+        width: 75px;
+        height: 110px;
     }
 }
