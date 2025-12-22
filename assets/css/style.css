@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
-body{
+body {
     margin: 0;
     background-color: #000;
     color: #eee;
@@ -8,7 +8,7 @@ body{
     font-size: 12px;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
@@ -20,7 +20,7 @@ a{
 .carousel {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100vh; /* full viewport height */
     overflow: hidden;
 }
 
@@ -32,18 +32,6 @@ a{
     z-index: 5; /* lower than content */
     pointer-events: none;
 }
-
-.carousel .list .item .content {
-    position: absolute;
-    z-index: 10; /* higher than overlay */
-    top: 35%; /* adjust for vertical centering */
-    left: 37%;
-    transform: translateX(-50%);
-    color: #fff;
-    text-align: left;
-    text-shadow: 0 10px 40px rgba(0,0,0,.7);
-}
-
 
 .carousel .list .item {
     width: 100%;
@@ -58,9 +46,18 @@ a{
     object-fit: cover;
 }
 
+.carousel .list .item .content {
+    position: absolute;
+    z-index: 10; /* higher than overlay */
+    top: 35%; /* adjust for vertical centering */
+    left: 37%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 10px 40px rgba(0,0,0,.7);
+}
 
-
-.carousel .list .item .author{
+.carousel .list .item .author {
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 6px;
@@ -69,21 +66,21 @@ a{
     margin-bottom: 12px;
 }
 
-.carousel .list .item .title{
+.carousel .list .item .title {
     font-size: 4.8rem;
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 28px;
 }
 
-.carousel .list .item .buttons{
+.carousel .list .item .buttons {
     display: grid;
     grid-template-columns: repeat(2, 170px);
     grid-template-rows: 48px;
     gap: 16px;
 }
 
-.carousel .list .item .buttons .btn{
+.carousel .list .item .buttons .btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -97,30 +94,30 @@ a{
     box-shadow: 0 8px 30px rgba(0,0,0,.4);
 }
 
-.carousel .list .item .buttons .swiggy{
+.carousel .list .item .buttons .swiggy {
     background: linear-gradient(135deg, #fc8019, #ff9f45);
     color: #000;
 }
 
-.carousel .list .item .buttons .swiggy:hover{
+.carousel .list .item .buttons .swiggy:hover {
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 15px 40px rgba(252,128,25,.6);
 }
 
-.carousel .list .item .buttons .zomato{
+.carousel .list .item .buttons .zomato {
     background: transparent;
     border: 2px solid #e23744;
     color: #fff;
 }
 
-.carousel .list .item .buttons .zomato:hover{
+.carousel .list .item .buttons .zomato:hover {
     background: #e23744;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 15px 40px rgba(226,55,68,.6);
 }
 
 /* thumbnails */
-.thumbnail{
+.thumbnail {
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -130,14 +127,14 @@ a{
     gap: 20px;
 }
 
-.thumbnail .item{
+.thumbnail .item {
     width: 150px;
     height: 220px;
     flex-shrink: 0;
     position: relative;
 }
 
-.thumbnail .item img{
+.thumbnail .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -145,7 +142,7 @@ a{
 }
 
 /* arrows */
-.arrows{
+.arrows {
     position: absolute;
     top: 80%;
     right: 52%;
@@ -156,7 +153,7 @@ a{
     gap: 10px;
 }
 
-.arrows button{
+.arrows button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -168,74 +165,30 @@ a{
     transition: .3s;
 }
 
-.arrows button:hover{
+.arrows button:hover {
     background-color: #fff;
     color: #000;
 }
 
 /* animation */
-.carousel .list .item:nth-child(1){
+.carousel .list .item:nth-child(1) {
     z-index: 1;
 }
 
 .carousel .list .item:nth-child(1) .author,
 .carousel .list .item:nth-child(1) .title,
-.carousel .list .item:nth-child(1) .buttons{
+.carousel .list .item:nth-child(1) .buttons {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
     animation: showContent .6s 1s linear forwards;
 }
 
-@keyframes showContent{
-    to{
+@keyframes showContent {
+    to {
         transform: translateY(0);
         filter: blur(0);
         opacity: 1;
-    }
-}
-
-/* responsive */
-@media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-        top: 50%;
-    }
-
-    .carousel .list .item .title{
-        font-size: 2.8rem;
-    }
-
-    .carousel .list .item .buttons{
-        grid-template-columns: 1fr;
-        width: 220px;
-    }
-}
-
-@media (max-width: 768px){
-    .carousel .list .item .content{
-        top: 30%;
-    }
-
-    .thumbnail{
-        bottom: 20px;
-        gap: 10px;
-    }
-
-    .thumbnail .item{
-        width: 90px;
-        height: 130px;
-    }
-
-    .thumbnail .item img{
-        border-radius: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .thumbnail .item{
-        width: 75px;
-        height: 110px;
     }
 }
 
@@ -282,11 +235,69 @@ a{
     box-shadow: 0 12px 25px rgba(226,55,68,0.6);
 }
 
-/* RESPONSIVE BUTTONS */
-@media (max-width: 678px){
+/* ================= RESPONIVE ================= */
+@media screen and (max-width: 678px) {
+    .carousel {
+        height: 95vh; /* reduce carousel height on mobile */
+    }
+
+    .carousel .list .item .content {
+        top: 40%; /* adjust vertical centering for mobile */
+        padding-right: 0;
+    }
+
+    .carousel .list .item .title {
+        font-size: 2.8rem;
+    }
+
+    .carousel .list .item .buttons {
+        grid-template-columns: 1fr;
+        width: 220px;
+    }
+
+    .thumbnail {
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .thumbnail .item {
+        width: 70px;
+        height: 100px;
+    }
+
+    .thumbnail .item img {
+        border-radius: 12px;
+    }
+
     .buttons .btn {
         padding: 10px 20px;
         font-size: 12px;
     }
 }
 
+@media (max-width: 768px) {
+    .carousel .list .item .content {
+        top: 30%;
+    }
+
+    .thumbnail {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .thumbnail .item {
+        width: 90px;
+        height: 130px;
+    }
+
+    .thumbnail .item img {
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail .item {
+        width: 75px;
+        height: 110px;
+    }
+}
