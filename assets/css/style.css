@@ -205,78 +205,125 @@ header a{
         opacity: 1;
     }
 }
+/* ================= RESPONSIVE SYSTEM ================= */
 
-/* ================= MOBILE ================= */
-@media screen and (max-width: 678px) {
-    .carousel .list .item .content{
-        padding-right: 0;
-        top: 50%;
+/* ---------- Large Screens (1440px+) ---------- */
+@media (min-width: 1440px) {
+    .carousel .list .item .content {
+        top: 32%;
+        max-width: 1100px;
     }
 
-    .carousel .list .item .title{
+    .carousel .list .item .title {
+        font-size: 5.2rem;
+    }
+}
+
+/* ---------- Laptops & Tablets Landscape ---------- */
+@media (max-width: 1200px) {
+    .carousel .list .item .content {
+        top: 34%;
+        padding-right: 20%;
+    }
+
+    .carousel .list .item .title {
+        font-size: 4.2rem;
+    }
+}
+
+/* ---------- Tablets & Small Laptops ---------- */
+@media (max-width: 992px) {
+    .carousel {
+        height: 85vh;
+    }
+
+    .carousel .list .item {
+        height: 85vh;
+    }
+
+    .carousel .list .item .content {
+        top: 30%;
+        padding-right: 0;
+        max-width: 90%;
+    }
+
+    .carousel .list .item .title {
+        font-size: 3.6rem;
+    }
+
+    .carousel .list .item .buttons {
+        grid-template-columns: repeat(2, 150px);
+    }
+
+    .thumbnail .item {
+        width: 120px;
+        height: 170px;
+    }
+}
+
+/* ---------- Mobile Devices ---------- */
+@media (max-width: 768px) {
+    .carousel {
+        height: 78vh;
+        min-height: 520px;
+    }
+
+    .carousel .list .item {
+        height: 78vh;
+    }
+
+    .carousel .list .item .content {
+        top: 26%;
+        max-width: 92%;
+        text-align: left;
+    }
+
+    .carousel .list .item .title {
         font-size: 2.8rem;
     }
 
-    .carousel .list .item .buttons{
+    .carousel .list .item .buttons {
         grid-template-columns: 1fr;
         width: 220px;
     }
-}
 
-@media (max-width: 768px){
-    .carousel .list .item .content{
-        top: 30%;
-    }
-}
-
-/* ===== Mobile Thumbnail Resize ===== */
-@media (max-width: 768px) {
-    .thumbnail{
-        bottom: 20px;
+    .thumbnail {
+        bottom: 16px;
         gap: 10px;
     }
 
-    .thumbnail .item{
+    .thumbnail .item {
         width: 90px;
         height: 130px;
     }
 
-    .thumbnail .item img{
+    .thumbnail .item img {
         border-radius: 14px;
     }
 }
 
-/* Extra small phones */
-@media (max-width: 480px) {
-    .thumbnail .item{
-        width: 75px;
-        height: 110px;
-    }
-}
-/* ===== Reduce Landing Section Height on Mobile ===== */
-@media (max-width: 768px) {
-    .carousel {
-        height: 80vh;        /* reduce hero height */
-        min-height: 520px;   /* prevents too small screens */
-    }
-
-    .carousel .list .item {
-        height: 80vh;
-    }
-
-    .carousel .list .item .content {
-        top: 28%;            /* move content up */
-    }
-}
-
-/* Extra small phones */
+/* ---------- Small Phones ---------- */
 @media (max-width: 480px) {
     .carousel {
-        height: 80vh;
+        height: 72vh;
         min-height: 480px;
     }
 
     .carousel .list .item .content {
-        top: 25%;
+        top: 24%;
+    }
+
+    .carousel .list .item .title {
+        font-size: 2.3rem;
+    }
+
+    .carousel .list .item .author {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .thumbnail .item {
+        width: 72px;
+        height: 105px;
     }
 }
