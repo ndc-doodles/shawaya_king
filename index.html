@@ -397,28 +397,37 @@
   </div>
 </section>
 
-<section class="relative py-16 bg-[#0f0f0f] overflow-hidden">
-
-  <!-- CONTENT WRAPPER -->
-  <div class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-8 md:gap-12">
+<section class="py-16 bg-[#0f0f0f]">
+  <div
+    class="max-w-5xl mx-auto px-6
+           flex flex-col md:flex-row-reverse
+           items-stretch gap-12"
+  >
 
     <!-- IMAGE -->
-    <div class="w-full md:w-1/2 rounded-xl overflow-hidden flex-shrink-0">
+    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg">
       <img
-        src="assets/images/s3.jpg"
-        alt="Jemican Shawaya"
-        class="w-full h-48 sm:h-56 md:h-auto object-cover"
+        src="assets/images/s2.jpg"
+        alt="Indian Masala Shawai"
+        class="w-full h-56 sm:h-64 md:h-full object-cover"
       >
     </div>
 
     <!-- DETAILS -->
-    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col md:justify-between">
+    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-between">
 
-      <!-- TITLE + TYPES -->
       <div>
-        <h2 class="text-white text-3xl md:text-4xl font-bold mb-4 md:mb-6">Jemican Shawaya</h2>
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+          Korean Shawai
+        </h2>
 
-        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-6 md:gap-8 text-gray-300 text-lg">
+        <!-- TYPES -->
+        <div
+          class="flex flex-col md:flex-row
+                 justify-center md:justify-start
+                 items-center md:items-start
+                 gap-8 text-gray-300 text-lg"
+        >
 
           <!-- HALF -->
           <div class="flex flex-col items-center md:items-start space-y-1">
@@ -427,13 +436,15 @@
             <span>Veg Salad</span>
             <span>Mayonise</span>
             <span>1 Bread</span>
-            <hr class="border-t-2 border-dotted border-gray-500 w-full my-1">
-            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">Total: ₹269</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹240
+            </span>
           </div>
 
           <!-- DIVIDER -->
           <div class="hidden md:block border-l-2 border-dotted border-gray-500 self-stretch"></div>
-          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-4"></div>
+          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-6"></div>
 
           <!-- FULL -->
           <div class="flex flex-col items-center md:items-start space-y-1">
@@ -442,18 +453,25 @@
             <span>Veg Salad</span>
             <span>Mayonise</span>
             <span>2 Breads</span>
-            <hr class="border-t-2 border-dotted border-gray-500 w-full my-1">
-            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">Total: ₹570</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹550
+            </span>
           </div>
 
         </div>
       </div>
 
       <!-- ADD-ONS -->
-      <div class="flex justify-center mt-4 md:mt-6 text-gray-300 text-lg">
-        <div class="flex flex-col items-center space-y-1 bg-[#1a1a1a] p-3 md:p-4 rounded-xl shadow-md w-full max-w-2xl">
+      <div class="flex justify-center mt-6 text-gray-300 text-lg">
+        <div
+          class="flex flex-col items-center space-y-2
+                 bg-[#1a1a1a] p-4 rounded-xl shadow-md
+                 w-full max-w-2xl"
+        >
           <span class="font-semibold text-white text-lg">Add-ons</span>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 md:gap-2 mt-1 md:mt-2 w-full text-sm sm:text-base">
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 w-full text-sm sm:text-base">
             <span>Ghee Rice - ₹120</span>
             <span>Kubus - ₹15</span>
             <span>Rumali - ₹20</span>
@@ -463,12 +481,27 @@
         </div>
       </div>
 
-      <!-- ORDER BUTTONS -->
-      <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 mt-4 md:mt-6 max-w-2xl mx-auto">
-        <a href="https://www.swiggy.com/" target="_blank" class="bg-[#fc8019] hover:bg-[#e76e00] text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 text-center w-full sm:w-auto">
+      <!-- BUTTONS -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6 max-w-2xl mx-auto">
+        <a
+          href="https://www.swiggy.com/"
+          target="_blank"
+          class="bg-[#fc8019] hover:bg-[#e76e00]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition
+                 w-full sm:w-auto text-center"
+        >
           Order on Swiggy
         </a>
-        <a href="https://www.zomato.com/" target="_blank" class="bg-[#ee2a2a] hover:bg-[#c92020] text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 text-center w-full sm:w-auto">
+
+        <a
+          href="https://www.zomato.com/"
+          target="_blank"
+          class="bg-[#ee2a2a] hover:bg-[#c92020]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition
+                 w-full sm:w-auto text-center"
+        >
           Order on Zomato
         </a>
       </div>
@@ -498,7 +531,7 @@
     <!-- IMAGE -->
     <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
       <img
-        src="assets/images/s4.jpg"
+        src="assets/images/s3.jpg"
         alt="Indian Masala Shawai"
         class="w-full h-56 sm:h-64 md:h-full object-cover"
       >
@@ -509,7 +542,7 @@
 
       <div>
         <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
-          Indian Masala Shawai
+          Jamaican Shawai
         </h2>
 
         <!-- TYPES -->
@@ -529,7 +562,7 @@
             <span>1 Bread</span>
             <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
             <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
-              Total: ₹269
+              Total: ₹279
             </span>
           </div>
 
@@ -546,7 +579,7 @@
             <span>2 Breads</span>
             <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
             <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
-              Total: ₹570
+              Total: ₹580
             </span>
           </div>
 
@@ -592,6 +625,119 @@
                  text-white font-bold py-2 px-6
                  rounded-lg transition-all duration-300
                  text-center w-full sm:w-auto"
+        >
+          Order on Zomato
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-[#0f0f0f]">
+  <div
+    class="max-w-5xl mx-auto px-6
+           flex flex-col md:flex-row-reverse
+           items-stretch gap-12"
+  >
+
+    <!-- IMAGE -->
+    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg">
+      <img
+        src="assets/images/s4.jpg"
+        alt="Indian Masala Shawai"
+        class="w-full h-56 sm:h-64 md:h-full object-cover"
+      >
+    </div>
+
+    <!-- DETAILS -->
+    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-between">
+
+      <div>
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+          Arabic Shawai
+        </h2>
+
+        <!-- TYPES -->
+        <div
+          class="flex flex-col md:flex-row
+                 justify-center md:justify-start
+                 items-center md:items-start
+                 gap-8 text-gray-300 text-lg"
+        >
+
+          <!-- HALF -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Half</span>
+            <span>Half Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>1 Bread</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹279
+            </span>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden md:block border-l-2 border-dotted border-gray-500 self-stretch"></div>
+          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-6"></div>
+
+          <!-- FULL -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Full</span>
+            <span>Full Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>2 Breads</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹575
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div class="flex justify-center mt-6 text-gray-300 text-lg">
+        <div
+          class="flex flex-col items-center space-y-2
+                 bg-[#1a1a1a] p-4 rounded-xl shadow-md
+                 w-full max-w-2xl"
+        >
+          <span class="font-semibold text-white text-lg">Add-ons</span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 w-full text-sm sm:text-base">
+            <span>Ghee Rice - ₹120</span>
+            <span>Kubus - ₹15</span>
+            <span>Rumali - ₹20</span>
+            <span>Mayonise - ₹20</span>
+            <span>Veg Salad - ₹50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6 max-w-2xl mx-auto">
+        <a
+          href="https://www.swiggy.com/"
+          target="_blank"
+          class="bg-[#fc8019] hover:bg-[#e76e00]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition
+                 w-full sm:w-auto text-center"
+        >
+          Order on Swiggy
+        </a>
+
+        <a
+          href="https://www.zomato.com/"
+          target="_blank"
+          class="bg-[#ee2a2a] hover:bg-[#c92020]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition
+                 w-full sm:w-auto text-center"
         >
           Order on Zomato
         </a>
