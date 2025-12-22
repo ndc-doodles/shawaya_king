@@ -253,3 +253,30 @@ header a{
         height: 110px;
     }
 }
+/* ===== Reduce Landing Section Height on Mobile ===== */
+@media (max-width: 768px) {
+    .carousel {
+        height: 80vh;        /* reduce hero height */
+        min-height: 520px;   /* prevents too small screens */
+    }
+
+    .carousel .list .item {
+        height: 80vh;
+    }
+
+    .carousel .list .item .content {
+        top: 28%;            /* move content up */
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .carousel {
+        height: 80vh;
+        min-height: 480px;
+    }
+
+    .carousel .list .item .content {
+        top: 25%;
+    }
+}
