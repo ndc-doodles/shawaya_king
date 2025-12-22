@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body{
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+     font-family: 'Cinzel', serif;
+    font-size: 12px;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* ================= HEADER ================= */
+header{
+    width: 1140px;
+    max-width: 80%;
+    margin: auto;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+}
+
+header a{
+    color: #eee;
+    margin-right: 40px;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.carousel .list .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ================= CONTENT ================= */
+.carousel .list .item .content{
+    position: absolute;
+    top: 35%;
+    width: 1140px;
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 10px 40px rgba(0,0,0,.6);
+}
+
+/* TAGLINE */
+.carousel .list .item .author{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #f1683a;
+    margin-bottom: 12px;
+}
+
+/* HERO TITLE */
+.carousel .list .item .title{
+    font-size: 4.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
+}
+
+/* ================= BUTTONS ================= */
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: 48px;
+    gap: 16px;
+}
+
+/* COMMON BUTTON */
+.carousel .list .item .buttons .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    transition: all .35s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0,0,0,.4);
+}
+
+/* SWIGGY */
+.carousel .list .item .buttons .swiggy{
+    background: linear-gradient(135deg, #fc8019, #ff9f45);
+    color: #000;
+}
+
+.carousel .list .item .buttons .swiggy:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(252,128,25,.6);
+}
+
+/* ZOMATO */
+.carousel .list .item .buttons .zomato{
+    background: transparent;
+    border: 2px solid #e23744;
+    color: #fff;
+}
+
+.carousel .list .item .buttons .zomato:hover{
+    background: #e23744;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(226,55,68,.6);
+}
+
+/* ================= THUMBNAIL ================= */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* ================= ARROWS ================= */
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+}
+
+.arrows button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff30;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* ================= ANIMATIONS ================= */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .buttons{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .6s 1s linear forwards;
+}
+
+@keyframes showContent{
+    to{
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+/* ================= MOBILE ================= */
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+        top: 50%;
+    }
+
+    .carousel .list .item .title{
+        font-size: 2.8rem;
+    }
+
+    .carousel .list .item .buttons{
+        grid-template-columns: 1fr;
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px){
+    .carousel .list .item .content{
+        top: 30%;
+    }
+}
+
+/* ===== Mobile Thumbnail Resize ===== */
+@media (max-width: 768px) {
+    .thumbnail{
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .thumbnail .item{
+        width: 90px;
+        height: 130px;
+    }
+
+    .thumbnail .item img{
+        border-radius: 14px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+    .thumbnail .item{
+        width: 75px;
+        height: 110px;
+    }
+}
