@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shawaya King</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap" rel="stylesheet">
+<!-- FONT AWESOME (add once in <head>) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+  <style>
+    body {
+      font-family: 'Cinzel', serif;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #0f0f0f 20%, #1a1410 60%, #120d09 100%);
+
+    }
+      @keyframes rotateSlow {
+  from {
+    transform: rotate(0deg) scale(1.1);
+  }
+  to {
+    transform: rotate(360deg) scale(1.1);
+  }
+}
+
+.animate-rotate-slow {
+  animation: rotateSlow 120s linear infinite;
+}
+      @media (max-width: 768px) {
+  .animate-rotate-slow {
+    animation: none;
+  }
+}
+
+
+  </style>
+</head>
+<body class=  >
+
+<!-- HERO + ABOUT (MERGED) -->
+<section class="relative min-h-screen overflow-hidden">
+
+  <!-- OVERSIZED ROTATING BACKGROUND -->
+  <div
+    class="absolute inset-[-25%] bg-cover bg-center animate-rotate-slow"
+    style="background-image: url('assets/images/hero.jpg');">
+  </div>
+
+  <!-- Dark Overlay -->
+  <div class="absolute inset-0 bg-black/70 z-0"></div>
+
+  <!-- Bottom Fade -->
+  <div class="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-black via-black/80 to-transparent z-10"></div>
+
+<!-- NAVBAR -->
+<nav
+  id="navbar"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+>
+  <div
+    id="navInner"
+    class="max-w-7xl mx-auto px-6 md:px-10 py-6
+           flex items-center justify-between
+           transition-all duration-300"
+  >
+    <!-- LOGO -->
+    <img
+      id="logo"
+      src="assets/images/logo.png"
+      alt="Shawaya King"
+      class="h-20 md:h-32 w-auto transition-all duration-300"
+    />
+
+    <!-- DESKTOP MENU -->
+    <ul class="hidden md:flex gap-20 text-white text-sm uppercase tracking-[0.35em]">
+      <li class="cursor-pointer hover:text-yellow-500 transition">Home</li>
+      <li class="cursor-pointer hover:text-yellow-500 transition">About</li>
+      <li class="cursor-pointer hover:text-yellow-500 transition">Contact</li>
+    </ul>
+
+    <!-- MOBILE MENU BUTTON -->
+    <button
+      id="menuBtn"
+      class="md:hidden text-white text-3xl"
+      aria-label="Open menu"
+    >
+      ☰
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE FULLSCREEN MENU (OUTSIDE NAVBAR) -->
+<div
+  id="mobileMenu"
+  class="fixed inset-0 bg-black hidden
+         flex items-center justify-center
+         text-white z-[999]"
+>
+  <!-- CLOSE BUTTON -->
+  <button
+    id="closeMenu"
+    class="absolute top-6 right-6 text-4xl"
+    aria-label="Close menu"
+  >
+    ✕
+  </button>
+
+  <!-- MENU LINKS -->
+  <ul class="flex flex-col gap-10 text-xl uppercase tracking-[0.35em] text-center">
+    <li class="hover:text-yellow-500 transition">Home</li>
+    <li class="hover:text-yellow-500 transition">About</li>
+    <li class="hover:text-yellow-500 transition">Contact</li>
+  </ul>
+</div>
+
+
+  <div class="relative z-20 flex items-center justify-center min-h-screen text-center px-4">
+  <h1 class="text-yellow-500
+             text-4xl sm:text-5xl md:text-7xl
+             tracking-[0.25em] md:tracking-[0.4em]">
+    SHAWAYA KING
+  </h1>
+</div>
+
+
+  <!-- ABOUT + FOOD SECTION -->
+  <div
+  class="relative z-20 pt-16 md:pt-24"
+  style="background: linear-gradient(to bottom, rgba(0,0,0,0), #0f0f0f 20%, #1a1410 60%, #120d09 100%);"
+>
+
+
+
+  <div class="max-w-5xl mx-auto px-6 pt-20 md:pt-24 text-center">
+  <h2 class="text-[#c58b59] text-lg sm:text-xl md:text-2xl font-semibold mb-6">
+    Welcome to Shawaya King, where passion meets flavor!
+  </h2>
+
+  <p class="text-gray-300 text-sm sm:text-base md:text-lg
+            leading-relaxed max-w-3xl mx-auto">
+    At Shawaya King, we believe that great food brings people together.
+    Our journey started with a simple mission: to serve delicious,
+    high-quality and authentic dishes made with the freshest ingredients.
+    Whether you’re craving traditional flavors, mouthwatering grills or
+    hearty comfort food, we’ve got something special for every taste.
+  </p>
+</div>
+
+    <!-- FOOD CARD-->
+   <div class="max-w-6xl mx-auto px-6 pt-20 md:pt-32 pb-20">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4
+           gap-12 sm:gap-16 lg:gap-20
+           justify-items-center"
+  >
+
+        <!-- CARD 1-->
+        <div class="relative w-[240px] h-[260px] bg-[#242222] rounded-[32px] px-4 pt-20 pb-10 shadow-[0_0_60px_rgba(0,0,0,0.6)] hover:scale-105 transition">
+          <div class="absolute top-8 left-1/2 -translate-x-1/2">
+            <img src="assets/images/masala.jpg" class="w-28 h-28 rounded-full object-cover border-4 border-[#2e2b2b]" />
+          </div>
+          <div class="mt-24 flex justify-between">
+            <p class="text-white text-sm max-w-[160px]">Indian Masala Shawaya</p>
+            <span class="text-xs text-white">4.5 <span class="text-yellow-500">★</span></span>
+          </div>
+<!--          <span class="absolute bottom-6 right-8 text-xs text-[#9a845f]">300 kcal</span>-->
+        </div>
+
+       <!-- CARD 2-->
+        <div
+  class="relative
+         w-[220px] sm:w-[240px]
+         h-[240px] sm:h-[260px]
+         bg-[#242222]
+         rounded-[32px]
+         px-4 pt-20 pb-10
+         shadow-[0_0_60px_rgba(0,0,0,0.6)]
+         hover:scale-105 transition"
+>
+  <div class="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2">
+    <img
+      src="assets/images/korean.jpg"
+      class="w-24 h-24 sm:w-28 sm:h-28
+             rounded-full object-cover
+             border-4 border-[#2e2b2b]"
+    />
+  </div>
+
+  <div class="mt-20 sm:mt-24 flex justify-between items-start">
+    <p class="text-white text-sm max-w-[140px] sm:max-w-[160px]">
+      Korean Shawai
+    </p>
+    <span class="text-xs text-white">
+      4.5 <span class="text-yellow-500">★</span>
+    </span>
+  </div>
+</div>
+
+       <!-- CARD 3-->
+      <div
+  class="relative
+         w-[220px] sm:w-[240px]
+         h-[240px] sm:h-[260px]
+         bg-[#242222]
+         rounded-[32px]
+         px-4 pt-20 pb-10
+         shadow-[0_0_60px_rgba(0,0,0,0.6)]
+         hover:scale-105 transition"
+>
+  <div class="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2">
+    <img
+      src="assets/images/jamaica.jpg"
+      class="w-24 h-24 sm:w-28 sm:h-28
+             rounded-full object-cover
+             border-4 border-[#2e2b2b]"
+    />
+  </div>
+
+  <div class="mt-20 sm:mt-24 flex justify-between items-start">
+    <p class="text-white text-sm max-w-[140px] sm:max-w-[160px]">
+      Jemican Shawaya
+    </p>
+    <span class="text-xs text-white">
+      4.5 <span class="text-yellow-500">★</span>
+    </span>
+  </div>
+</div>
+
+        <!-- CARD 4-->
+      <div
+  class="relative
+         w-[220px] sm:w-[240px]
+         h-[240px] sm:h-[260px]
+         bg-[#242222]
+         rounded-[32px]
+         px-4 pt-20 pb-10
+         shadow-[0_0_60px_rgba(0,0,0,0.6)]
+         hover:scale-105 transition"
+>
+  <div class="absolute top-6 sm:top-8 left-1/2 -translate-x-1/2">
+    <img
+      src="assets/images/arabic.jpg"
+      class="w-24 h-24 sm:w-28 sm:h-28
+             rounded-full object-cover
+             border-4 border-[#2e2b2b]"
+    />
+  </div>
+
+  <div class="mt-20 sm:mt-24 flex justify-between items-start">
+    <p class="text-white text-sm max-w-[140px] sm:max-w-[160px]">
+      Arabic Shawaya
+    </p>
+    <span class="text-xs text-white">
+      4.5 <span class="text-yellow-500">★</span>
+    </span>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="relative py-16 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- TOP GRADIENT MERGE (Responsive Height) -->
+  <div
+    class="absolute top-0 left-0 w-full
+           h-24 sm:h-32 md:h-40
+           bg-gradient-to-b
+           from-[#120d09] via-[#0f0f0f]/80 to-transparent
+           z-0">
+  </div>
+
+  <!-- CONTENT WRAPPER -->
+  <div
+    class="relative z-10 max-w-5xl mx-auto px-6
+           pt-12 sm:pt-16 md:pt-0
+           flex flex-col md:flex-row items-stretch gap-12"
+  >
+
+    <!-- IMAGE -->
+    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+      <img
+        src="assets/images/sh1.jpg"
+        alt="Indian Masala Shawai"
+        class="w-full h-56 sm:h-64 md:h-full object-cover"
+      >
+    </div>
+
+    <!-- DETAILS -->
+    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-between">
+
+      <div>
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+          Indian Masala Shawai
+        </h2>
+
+        <!-- TYPES -->
+        <div
+          class="flex flex-col md:flex-row
+                 justify-center md:justify-start
+                 items-center md:items-start
+                 gap-8 text-gray-300 text-lg"
+        >
+
+          <!-- SHAWAI HALF -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Half</span>
+            <span>Half Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>1 Bread</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹269
+            </span>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden md:block border-l-2 border-dotted border-gray-500 self-stretch"></div>
+          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-6"></div>
+
+          <!-- SHAWAI FULL -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Full</span>
+            <span>Full Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>2 Breads</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹570
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div class="flex justify-center mt-6 text-gray-300 text-lg">
+        <div
+          class="flex flex-col items-center space-y-2
+                 bg-[#1a1a1a] p-4 rounded-xl shadow-md
+                 w-full max-w-2xl"
+        >
+          <span class="font-semibold text-white text-lg">Add-ons</span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 w-full text-sm sm:text-base">
+            <span>Ghee Rice - ₹120</span>
+            <span>Kubus - ₹15</span>
+            <span>Rumali - ₹20</span>
+            <span>Mayonise - ₹20</span>
+            <span>Veg Salad - ₹50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER BUTTONS -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6 max-w-2xl mx-auto">
+        <a
+          href="https://www.swiggy.com/"
+          target="_blank"
+          class="bg-[#fc8019] hover:bg-[#e76e00]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition-all duration-300
+                 text-center w-full sm:w-auto"
+        >
+          Order on Swiggy
+        </a>
+
+        <a
+          href="https://www.zomato.com/"
+          target="_blank"
+          class="bg-[#ee2a2a] hover:bg-[#c92020]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition-all duration-300
+                 text-center w-full sm:w-auto"
+        >
+          Order on Zomato
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="relative py-16 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- CONTENT WRAPPER -->
+  <div class="relative z-10 max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-stretch gap-8 md:gap-12">
+
+    <!-- IMAGE -->
+    <div class="w-full md:w-1/2 rounded-xl overflow-hidden flex-shrink-0">
+      <img
+        src="assets/images/s3.jpg"
+        alt="Jemican Shawaya"
+        class="w-full h-48 sm:h-56 md:h-auto object-cover"
+      >
+    </div>
+
+    <!-- DETAILS -->
+    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col md:justify-between">
+
+      <!-- TITLE + TYPES -->
+      <div>
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-4 md:mb-6">Jemican Shawaya</h2>
+
+        <div class="flex flex-col md:flex-row justify-center md:justify-start items-center md:items-start gap-6 md:gap-8 text-gray-300 text-lg">
+
+          <!-- HALF -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Half</span>
+            <span>Half Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>1 Bread</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-1">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">Total: ₹269</span>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden md:block border-l-2 border-dotted border-gray-500 self-stretch"></div>
+          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-4"></div>
+
+          <!-- FULL -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Full</span>
+            <span>Full Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>2 Breads</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-1">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">Total: ₹570</span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div class="flex justify-center mt-4 md:mt-6 text-gray-300 text-lg">
+        <div class="flex flex-col items-center space-y-1 bg-[#1a1a1a] p-3 md:p-4 rounded-xl shadow-md w-full max-w-2xl">
+          <span class="font-semibold text-white text-lg">Add-ons</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-1 md:gap-2 mt-1 md:mt-2 w-full text-sm sm:text-base">
+            <span>Ghee Rice - ₹120</span>
+            <span>Kubus - ₹15</span>
+            <span>Rumali - ₹20</span>
+            <span>Mayonise - ₹20</span>
+            <span>Veg Salad - ₹50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER BUTTONS -->
+      <div class="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 mt-4 md:mt-6 max-w-2xl mx-auto">
+        <a href="https://www.swiggy.com/" target="_blank" class="bg-[#fc8019] hover:bg-[#e76e00] text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 text-center w-full sm:w-auto">
+          Order on Swiggy
+        </a>
+        <a href="https://www.zomato.com/" target="_blank" class="bg-[#ee2a2a] hover:bg-[#c92020] text-white font-bold py-2.5 px-6 rounded-lg transition-all duration-300 text-center w-full sm:w-auto">
+          Order on Zomato
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="relative py-16 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- TOP GRADIENT MERGE (Responsive Height) -->
+  <div
+    class="absolute top-0 left-0 w-full
+           h-24 sm:h-32 md:h-40
+           bg-gradient-to-b
+           from-[#120d09] via-[#0f0f0f]/80 to-transparent
+           z-0">
+  </div>
+
+  <!-- CONTENT WRAPPER -->
+  <div
+    class="relative z-10 max-w-5xl mx-auto px-6
+           pt-12 sm:pt-16 md:pt-0
+           flex flex-col md:flex-row items-stretch gap-12"
+  >
+
+    <!-- IMAGE -->
+    <div class="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+      <img
+        src="assets/images/s4.jpg"
+        alt="Indian Masala Shawai"
+        class="w-full h-56 sm:h-64 md:h-full object-cover"
+      >
+    </div>
+
+    <!-- DETAILS -->
+    <div class="w-full md:w-1/2 text-center md:text-left flex flex-col justify-between">
+
+      <div>
+        <h2 class="text-white text-3xl md:text-4xl font-bold mb-6">
+          Indian Masala Shawai
+        </h2>
+
+        <!-- TYPES -->
+        <div
+          class="flex flex-col md:flex-row
+                 justify-center md:justify-start
+                 items-center md:items-start
+                 gap-8 text-gray-300 text-lg"
+        >
+
+          <!-- SHAWAI HALF -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Half</span>
+            <span>Half Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>1 Bread</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹269
+            </span>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden md:block border-l-2 border-dotted border-gray-500 self-stretch"></div>
+          <div class="block md:hidden border-t-2 border-dotted border-gray-500 w-full my-6"></div>
+
+          <!-- SHAWAI FULL -->
+          <div class="flex flex-col items-center md:items-start space-y-1">
+            <span class="font-medium text-yellow-500">Shawai Full</span>
+            <span>Full Chicken</span>
+            <span>Veg Salad</span>
+            <span>Mayonise</span>
+            <span>2 Breads</span>
+            <hr class="border-t-2 border-dotted border-gray-500 w-full my-2">
+            <span class="text-yellow-500 font-bold text-2xl md:text-3xl">
+              Total: ₹570
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ADD-ONS -->
+      <div class="flex justify-center mt-6 text-gray-300 text-lg">
+        <div
+          class="flex flex-col items-center space-y-2
+                 bg-[#1a1a1a] p-4 rounded-xl shadow-md
+                 w-full max-w-2xl"
+        >
+          <span class="font-semibold text-white text-lg">Add-ons</span>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 mt-2 w-full text-sm sm:text-base">
+            <span>Ghee Rice - ₹120</span>
+            <span>Kubus - ₹15</span>
+            <span>Rumali - ₹20</span>
+            <span>Mayonise - ₹20</span>
+            <span>Veg Salad - ₹50</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER BUTTONS -->
+      <div class="flex flex-col sm:flex-row justify-center gap-4 mt-6 max-w-2xl mx-auto">
+        <a
+          href="https://www.swiggy.com/"
+          target="_blank"
+          class="bg-[#fc8019] hover:bg-[#e76e00]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition-all duration-300
+                 text-center w-full sm:w-auto"
+        >
+          Order on Swiggy
+        </a>
+
+        <a
+          href="https://www.zomato.com/"
+          target="_blank"
+          class="bg-[#ee2a2a] hover:bg-[#c92020]
+                 text-white font-bold py-2 px-6
+                 rounded-lg transition-all duration-300
+                 text-center w-full sm:w-auto"
+        >
+          Order on Zomato
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-[#374030] text-[#b0a36a] pt-20 pb-10 relative">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-16">
+
+    <!-- LOGO & TAGLINE -->
+    <div class="flex flex-col items-start space-y-3">
+      <img src="assets/images/logo.png" alt="Shawaya King" class="h-16 w-auto">
+      <p class="text-sm leading-relaxed">Tasty food for every mood</p>
+    </div>
+
+    <!-- MENU -->
+    <div class="space-y-4">
+      <h3 class="text-orange-500 font-semibold">MENU</h3>
+      <ul class="space-y-3 text-sm">
+        <li><a href="#" class="hover:text-orange-500 transition">Home</a></li>
+        <li><a href="#" class="hover:text-orange-500 transition">About Us</a></li>
+        <li><a href="#" class="hover:text-orange-500 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="space-y-3">
+      <h3 class="text-orange-500 font-semibold">CONTACT</h3>
+      <p class="text-sm"><strong>Phone:</strong> 233456789</p>
+      <p class="text-sm">No.50,Anusha Aramane, 8th Main, RNR Layout, Jayanthinagar
+Road, Ramamurthy Nagar. Bengaluru, INDIA, 560016</p>
+
+      <h3 class="text-orange-500 font-semibold pt-4">WORK HOURS</h3>
+      <p class="text-sm">Monday To Sunday</p>
+      <p class="text-sm">10:00 AM - 11:00 PM</p>
+    </div>
+
+    <!-- SOCIAL MEDIA & NEWSLETTER -->
+    <div class="flex flex-col space-y-5">
+      <h3 class="text-orange-500 font-semibold">SOCIAL MEDIA</h3>
+
+      <div class="flex gap-5 text-lg">
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-[#b0a36a]
+                          hover:bg-orange-500 hover:text-black transition">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-[#b0a36a]
+                          hover:bg-orange-500 hover:text-black transition">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-[#b0a36a]
+                          hover:bg-orange-500 hover:text-black transition">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full border border-[#b0a36a]
+                          hover:bg-orange-500 hover:text-black transition">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+
+      <h3 class="text-orange-500 font-semibold">STAY TUNED</h3>
+
+      <form class="flex w-full items-center border-b border-[#b0a36a] pb-2">
+        <input
+          type="email"
+          placeholder="Your email"
+          class="bg-transparent flex-1 py-2 text-sm outline-none text-white placeholder-[#b0a36a]"
+        />
+        <button type="submit" class="text-white text-xl ml-2">→</button>
+      </form>
+
+      <p class="text-[11px] leading-relaxed">
+        By clicking the button you agree with the terms & conditions and privacy policy
+      </p>
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="border-t border-[#b0a36a] mt-12 pt-6 text-center text-xs">
+    © 2025 Shawaya King. All rights reserved.
+  </div>
+</footer>
+
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const closeMenu = document.getElementById("closeMenu");
+  const mobileMenu = document.getElementById("mobileMenu");
+
+  const navbar = document.getElementById("navbar");
+  const navInner = document.getElementById("navInner");
+  const logo = document.getElementById("logo");
+
+  // MOBILE MENU
+  menuBtn.addEventListener("click", () => {
+    mobileMenu.classList.remove("hidden");
+    document.body.style.overflow = "hidden";
+  });
+
+  closeMenu.addEventListener("click", () => {
+    mobileMenu.classList.add("hidden");
+    document.body.style.overflow = "";
+  });
+
+  // NAVBAR SCROLL EFFECT
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      navbar.classList.add("backdrop-blur-md", "bg-black/60", "shadow-lg");
+      navInner.classList.replace("py-6", "py-3");
+      logo.classList.replace("h-20", "h-14");
+      logo.classList.replace("md:h-32", "md:h-20");
+    } else {
+      navbar.classList.remove("backdrop-blur-md", "bg-black/60", "shadow-lg");
+      navInner.classList.replace("py-3", "py-6");
+      logo.classList.replace("h-14", "h-20");
+      logo.classList.replace("md:h-20", "md:h-32");
+    }
+  });
+</script>
+
+
+
+</body>
+</html>
