@@ -4,7 +4,7 @@ body{
     margin: 0;
     background-color: #000;
     color: #eee;
-     font-family: 'Cinzel', serif;
+    font-family: 'Cinzel', serif;
     font-size: 12px;
 }
 
@@ -12,60 +12,54 @@ a{
     text-decoration: none;
 }
 
-/* ================= HEADER ================= */
-header{
-    width: 1140px;
-    max-width: 80%;
-    margin: auto;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-}
-
-header a{
-    color: #eee;
-    margin-right: 40px;
-}
-
 /* ================= CAROUSEL ================= */
-.carousel {
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+.carousel-wrapper {
     position: relative;
-    z-index: 10;
 }
 
-.carousel .list .item{
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* overlay */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5); /* adjust opacity to 0.5~0.6 for readability */
+    z-index: 5; /* lower than content */
+    pointer-events: none;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    z-index: 10; /* higher than overlay */
+    top: 35%; /* adjust for vertical centering */
+    left: 37%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 10px 40px rgba(0,0,0,.7);
+}
+
+
+.carousel .list .item {
     width: 100%;
     height: 100%;
     position: absolute;
     inset: 0;
 }
 
-.carousel .list .item img{
+.carousel .list .item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* ================= CONTENT ================= */
-.carousel .list .item .content{
-    position: absolute;
-    top: 35%;
-    width: 1140px;
-    max-width: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding-right: 30%;
-    box-sizing: border-box;
-    color: #fff;
-    text-shadow: 0 10px 40px rgba(0,0,0,.6);
-}
 
-/* TAGLINE */
+
 .carousel .list .item .author{
     font-size: 13px;
     font-weight: 600;
@@ -75,7 +69,6 @@ header a{
     margin-bottom: 12px;
 }
 
-/* HERO TITLE */
 .carousel .list .item .title{
     font-size: 4.8rem;
     font-weight: 900;
@@ -83,7 +76,6 @@ header a{
     margin-bottom: 28px;
 }
 
-/* ================= BUTTONS ================= */
 .carousel .list .item .buttons{
     display: grid;
     grid-template-columns: repeat(2, 170px);
@@ -91,7 +83,6 @@ header a{
     gap: 16px;
 }
 
-/* COMMON BUTTON */
 .carousel .list .item .buttons .btn{
     display: flex;
     align-items: center;
@@ -106,7 +97,6 @@ header a{
     box-shadow: 0 8px 30px rgba(0,0,0,.4);
 }
 
-/* SWIGGY */
 .carousel .list .item .buttons .swiggy{
     background: linear-gradient(135deg, #fc8019, #ff9f45);
     color: #000;
@@ -117,7 +107,6 @@ header a{
     box-shadow: 0 15px 40px rgba(252,128,25,.6);
 }
 
-/* ZOMATO */
 .carousel .list .item .buttons .zomato{
     background: transparent;
     border: 2px solid #e23744;
@@ -130,7 +119,7 @@ header a{
     box-shadow: 0 15px 40px rgba(226,55,68,.6);
 }
 
-/* ================= THUMBNAIL ================= */
+/* thumbnails */
 .thumbnail{
     position: absolute;
     bottom: 50px;
@@ -155,7 +144,7 @@ header a{
     border-radius: 20px;
 }
 
-/* ================= ARROWS ================= */
+/* arrows */
 .arrows{
     position: absolute;
     top: 80%;
@@ -184,7 +173,7 @@ header a{
     color: #000;
 }
 
-/* ================= ANIMATIONS ================= */
+/* animation */
 .carousel .list .item:nth-child(1){
     z-index: 1;
 }
@@ -206,7 +195,7 @@ header a{
     }
 }
 
-/* ================= MOBILE ================= */
+/* responsive */
 @media screen and (max-width: 678px) {
     .carousel .list .item .content{
         padding-right: 0;
@@ -227,10 +216,7 @@ header a{
     .carousel .list .item .content{
         top: 30%;
     }
-}
 
-/* ===== Mobile Thumbnail Resize ===== */
-@media (max-width: 768px) {
     .thumbnail{
         bottom: 20px;
         gap: 10px;
@@ -246,10 +232,61 @@ header a{
     }
 }
 
-/* Extra small phones */
 @media (max-width: 480px) {
     .thumbnail .item{
         width: 75px;
         height: 110px;
     }
 }
+
+/* COMMON BUTTON STYLING */
+.buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* SWIGGY BUTTON */
+.buttons .swiggy {
+    background: linear-gradient(135deg, #fc8019, #ff9f45);
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.buttons .swiggy:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(252,128,25,0.6);
+}
+
+/* ZOMATO BUTTON */
+.buttons .zomato {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #e23744;
+}
+
+.buttons .zomato:hover {
+    background: #e23744;
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(226,55,68,0.6);
+}
+
+/* RESPONSIVE BUTTONS */
+@media (max-width: 678px){
+    .buttons .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
