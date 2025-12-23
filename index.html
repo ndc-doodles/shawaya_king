@@ -25,6 +25,19 @@
 
 <!-- HERO + ABOUT (MERGED) -->
 <section class="relative min-h-screen overflow-hidden">
+<!-- LOGO TOP LEFT -->
+<div class="absolute top-4 left-4 md:top-8 md:left-8 z-50">
+  <img
+    id="logo"
+    src="assets/images/logo.png"
+    alt="Shawaya King"
+    class="h-20 md:h-32 w-auto
+           transform-gpu
+           backface-hidden
+           transition-all duration-300"
+  />
+</div>
+
 
   <!-- OVERSIZED ROTATING BACKGROUND -->
 <!--  <div-->
@@ -227,103 +240,155 @@
 
 
     <!-- ABOUT + FOOD SECTION -->
-  <div
-  class="relative z-20  md:pt-24"
-  style="background: linear-gradient(to bottom, rgba(0,0,0,0), #0f0f0f 20%, #1a1410 60%, #120d09 100%);"
+<div
+  class="relative z-20 pb-16"
+  style="background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0),
+    #0f0f0f 20%,
+    #1a1410 60%,
+    #120d09 100%
+  );"
 >
-
-
-
-  <div class="max-w-5xl mx-auto px-6 pt-12 md:pt-24 text-center">
-<!--  <h2 class="text-[#c58b59] text-lg sm:text-xl md:text-2xl font-semibold mb-6">-->
-<!--    Welcome to Shawaya King, where passion meets flavor!-->
-<!--  </h2>-->
-
-<!--  <p class="text-gray-300 text-sm sm:text-base md:text-lg-->
-<!--            leading-relaxed max-w-3xl mx-auto">-->
-<!--    At Shawaya King, we believe that great food brings people together.-->
-<!--    Our journey started with a simple mission: to serve delicious,-->
-<!--    high-quality and authentic dishes made with the freshest ingredients.-->
-<!--    Whether you’re craving traditional flavors, mouthwatering grills or-->
-<!--    hearty comfort food, we’ve got something special for every taste.-->
-<!--  </p>-->
-      <h2 class="text-[#fff] text-lg sm:text-xl md:text-2xl font-semibold mb-6">OUR MENU</h2>
+  <!-- TITLE -->
+  <div class="max-w-5xl mx-auto pb-6 px-6 pt-10 md:pt-24 text-center">
+  <h2 class="text-[#fff]
+             text-lg sm:text-xl md:text-2xl
+             lg:text-3xl xl:text-4xl
+             font-semibold mb-6">
+    OUR MENU
+  </h2>
 </div>
 
-    <!-- FOOD CARD-->
-   <div class="max-w-6xl mx-auto px-6 md:pt-18 pb-2">
 
-<div class="grid grid-cols-2 lg:grid-cols-4 gap-6 justify-items-center">
+  <!-- FOOD CARDS -->
+  <div class="max-w-5xl mx-auto">
+    <div
+      class="grid grid-cols-2 lg:grid-cols-4
+             gap-x-4 gap-y-6
+             lg:gap-x-3 lg:gap-y-5
+             justify-items-center"
+    >
 
-  <!-- CARD -->
-  <div class="w-[160px] h-[230px] bg-[#242222] rounded-[28px] shadow-lg flex flex-col items-center pt-6">
+      <!-- CARD -->
+      <div
+        class="w-[160px] h-[230px]
+               lg:w-[247px] lg:h-[275px]
+               bg-[#242222] rounded-[28px]
+               shadow-[0_10px_30px_rgba(0,0,0,0.45)]
+               hover:shadow-[0_20px_50px_rgba(0,0,0,0.65)]
+               lg:hover:-translate-y-2
+               transition-all duration-300
+               flex flex-col items-center pt-6"
+      >
+        <div
+          class="w-[92px] h-[92px]
+                 lg:w-[120px] lg:h-[120px]
+                 rounded-full bg-white overflow-hidden"
+        >
+          <img src="assets/images/masala.jpg" class="w-full h-full object-cover" />
+        </div>
 
-    <!-- Image -->
-    <div class="w-[92px] h-[92px] rounded-full bg-white flex items-center justify-center overflow-hidden">
-      <img src="assets/images/masala.jpg" class="w-full h-full object-cover" />
-    </div>
+        <div class="mt-auto mb-6 text-center px-4">
+          <p class="text-white text-sm lg:text-lg leading-tight font-medium">
+            Indian Masala<br />Shawaya
+          </p>
+          <p class="text-xs lg:text-base text-white mt-2">
+            4.5 <span class="text-yellow-500">★</span>
+          </p>
+        </div>
+      </div>
 
-    <!-- Text -->
-    <div class="mt-auto mb-5 text-center px-3">
-      <p class="text-white text-sm leading-tight font-medium">
-        Indian Masala<br>Shawaya
-      </p>
-      <p class="text-xs text-white mt-2">
-        4.5 <span class="text-yellow-500">★</span>
-      </p>
+      <!-- CARD -->
+      <div
+        class="w-[160px] h-[230px]
+               lg:w-[247px] lg:h-[275px]
+               bg-[#242222] rounded-[28px]
+               shadow-[0_10px_30px_rgba(0,0,0,0.45)]
+               hover:shadow-[0_20px_50px_rgba(0,0,0,0.65)]
+               lg:hover:-translate-y-2
+               transition-all duration-300
+               flex flex-col items-center pt-6"
+      >
+        <div
+          class="w-[92px] h-[92px]
+                 lg:w-[120px] lg:h-[120px]
+                 rounded-full bg-white overflow-hidden"
+        >
+          <img src="assets/images/korean.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="mt-auto mb-6 text-center px-4">
+          <p class="text-white text-sm lg:text-lg font-medium">
+            Korean Shawaya
+          </p>
+          <p class="text-xs lg:text-base text-white mt-2">
+            4.5 <span class="text-yellow-500">★</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="w-[160px] h-[230px]
+               lg:w-[247px] lg:h-[275px]
+               bg-[#242222] rounded-[28px]
+               shadow-[0_10px_30px_rgba(0,0,0,0.45)]
+               hover:shadow-[0_20px_50px_rgba(0,0,0,0.65)]
+               lg:hover:-translate-y-2
+               transition-all duration-300
+               flex flex-col items-center pt-6"
+      >
+        <div
+          class="w-[92px] h-[92px]
+                 lg:w-[120px] lg:h-[120px]
+                 rounded-full bg-white overflow-hidden"
+        >
+          <img src="assets/images/jamaica.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="mt-auto mb-6 text-center px-4">
+          <p class="text-white text-sm lg:text-lg font-medium">
+            Jamaican Shawaya
+          </p>
+          <p class="text-xs lg:text-base text-white mt-2">
+            4.5 <span class="text-yellow-500">★</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD -->
+      <div
+        class="w-[160px] h-[230px]
+               lg:w-[247px] lg:h-[275px]
+               bg-[#242222] rounded-[28px]
+               shadow-[0_10px_30px_rgba(0,0,0,0.45)]
+               hover:shadow-[0_20px_50px_rgba(0,0,0,0.65)]
+               lg:hover:-translate-y-2
+               transition-all duration-300
+               flex flex-col items-center pt-6"
+      >
+        <div
+          class="w-[92px] h-[92px]
+                 lg:w-[120px] lg:h-[120px]
+                 rounded-full bg-white overflow-hidden"
+        >
+          <img src="assets/images/arabic.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <div class="mt-auto mb-6 text-center px-4">
+          <p class="text-white text-sm lg:text-lg font-medium">
+            Arabic Shawaya
+          </p>
+          <p class="text-xs lg:text-base text-white mt-2">
+            4.5 <span class="text-yellow-500">★</span>
+          </p>
+        </div>
+      </div>
+
     </div>
   </div>
-
-  <!-- CARD -->
-  <div class="w-[160px] h-[230px] bg-[#242222] rounded-[28px] shadow-lg flex flex-col items-center pt-6">
-    <div class="w-[92px] h-[92px] rounded-full bg-white overflow-hidden">
-      <img src="assets/images/korean.jpg" class="w-full h-full object-cover" />
-    </div>
-    <div class="mt-auto mb-5 text-center px-3">
-      <p class="text-white text-sm font-medium">
-        Korean Shawaya
-      </p>
-      <p class="text-xs text-white mt-2">
-        4.5 <span class="text-yellow-500">★</span>
-      </p>
-    </div>
-  </div>
-
-  <!-- CARD -->
-  <div class="w-[160px] h-[230px] bg-[#242222] rounded-[28px] shadow-lg flex flex-col items-center pt-6">
-    <div class="w-[92px] h-[92px] rounded-full bg-white overflow-hidden">
-      <img src="assets/images/jamaica.jpg" class="w-full h-full object-cover" />
-    </div>
-    <div class="mt-auto mb-5 text-center px-3">
-      <p class="text-white text-sm font-medium">
-        Jamaican Shawaya
-      </p>
-      <p class="text-xs text-white mt-2">
-        4.5 <span class="text-yellow-500">★</span>
-      </p>
-    </div>
-  </div>
-
-  <!-- CARD -->
-  <div class="w-[160px] h-[230px] bg-[#242222] rounded-[28px] shadow-lg flex flex-col items-center pt-6">
-    <div class="w-[92px] h-[92px] rounded-full bg-white overflow-hidden">
-      <img src="assets/images/arabic.jpg" class="w-full h-full object-cover" />
-    </div>
-    <div class="mt-auto mb-5 text-center px-3">
-      <p class="text-white text-sm font-medium">
-        Arabic Shawaya
-      </p>
-      <p class="text-xs text-white mt-2">
-        4.5 <span class="text-yellow-500">★</span>
-      </p>
-    </div>
-  </div>
-
 </div>
-
-   </div>
-
-  </div>
 
 </section>
 
@@ -661,9 +726,9 @@
   </div>
 </section>
 
-<section class="py-16 bg-[#0f0f0f]">
+<section class="py-6 md:py-12 bg-[#0f0f0f]">
   <div
-    class="max-w-5xl mx-auto px-6
+    class="max-w-5xl mx-auto
            flex flex-col md:flex-row-reverse
            items-stretch gap-12"
   >

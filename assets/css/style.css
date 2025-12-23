@@ -303,3 +303,12 @@ a {
         transform: translateX(-50%);
     }
 }
+#logo {
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media (max-width: 767px) {
+  #logo {
+    transform: none !important;
+  }
+}
