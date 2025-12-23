@@ -14,12 +14,13 @@ a {
 
 /* ================= CAROUSEL ================= */
 .carousel {
-    height: 110vh;
+    height: 95vh; /* reduced from 110vh */
     width: 100vw;
     overflow: hidden;
     position: relative;
 }
 
+/* ================= LIST ITEM ================= */
 .carousel .list .item {
     width: 100%;
     height: 100%;
@@ -80,7 +81,6 @@ a {
     transition: 0.3s ease;
 }
 
-/* SWIGGY */
 .buttons .swiggy {
     background: linear-gradient(135deg, #fc8019, #ff9f45);
     color: #000;
@@ -91,7 +91,6 @@ a {
     box-shadow: 0 12px 25px rgba(252,128,25,0.6);
 }
 
-/* ZOMATO */
 .buttons .zomato {
     background: transparent;
     color: #fff;
@@ -241,12 +240,16 @@ a {
     to { width: 0; }
 }
 
-/* ================= MOBILE ================= */
 @media (max-width: 768px) {
+
+    /* REDUCE CAROUSEL HEIGHT */
+    .carousel {
+        height: 90vh;  /* reduced from 110vh */
+    }
 
     /* TEXT LEFT */
     .carousel .list .item .content {
-        top: 30%;
+        top: 25%;   /* slightly higher for smaller height */
         left: 6%;
         transform: none;
         max-width: 88%;
@@ -262,12 +265,12 @@ a {
     /* THUMBNAILS – OFF-CENTER RIGHT (INTENTIONAL) */
     .thumbnail {
         bottom: 20px;
-        right: -64%;       /* ✔ intentional offset */
+        right: -64%;
         left: auto;
         transform: none;
         display: flex;
         gap: 12px;
-        max-width: 140vw; /* stabilizes scrolling */
+        max-width: 140vw;
         overflow-x: auto;
         justify-content: flex-start;
         padding-left: 10px;
@@ -286,3 +289,4 @@ a {
         transform: translateX(-50%);
     }
 }
+
