@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body{
     margin: 0;
     background-color: #000;
@@ -314,65 +308,112 @@ header a{
         font-size: 30px;
     }
 }
-    </style>
-</head>
-<body>
 
+    /* Mobile thumbnails – LEFT aligned */
+@media (max-width: 768px) {
+
+    .thumbnail {
+        position: absolute;
+        bottom: 20px;
+        left: 10px;              /* LEFT aligned */
+        transform: none;         /* remove centering */
+        width: calc(100% - 20px);
+        display: flex;
+        gap: 12px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+        scrollbar-width: none;   /* Firefox */
+    }
+
+    .thumbnail::-webkit-scrollbar {
+        display: none;           /* Chrome */
+    }
+
+    .thumbnail .item {
+        width: 110px;
+        height: 160px;
+        flex-shrink: 0;
+    }
+
+    .thumbnail .item img {
+        border-radius: 14px;
+    }
+
+    .thumbnail .content {
+        font-size: 10px;
+    }
+}
+
+
+</style>
     <!-- carousel -->
     <div class="carousel">
         <!-- list item -->
         <div class="list">
             <div class="item">
-                <img src="assets/images/indian.jpg" ">
+                <img src="assets/images/w1.jpg">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
-
-                    <div class="des">
-                        </div>
+                    <div class="author">Meet Bangalore’s</div>
+                    <div class="title">New King of <span class="highlight">Shawaya</span></div>
+                    <div class="author">  <p>Indian Masala Shawaya</p></div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
+    <a href="https://www.swiggy.com" target="_blank" class="btn swiggy">ORDER ON SWIGGY</a>
+    <a href="https://www.zomato.com" target="_blank" class="btn zomato">ORDER ON ZOMATO</a>
+</div>
+
+
                 </div>
             </div>
             <div class="item">
-                <img src="assets/images/korean.jpg">
+                <img src="assets/images/w2.jpg">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">Meet Bangalore’s</div>
+                    <div class="title">New King of <span class="highlight">Shawaya</span></div>
+                                       <div class="author">  <p>Indian Masala Shawaya</p></div>
 
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
+    <a href="https://www.swiggy.com" target="_blank" class="btn swiggy">ORDER ON SWIGGY</a>
+    <a href="https://www.zomato.com" target="_blank" class="btn zomato">ORDER ON ZOMATO</a>
+</div>
+
+
                 </div>
             </div>
             <div class="item">
-                <img src="assets/images/jamaica.jpg">
+                <img src="assets/images/w3.jpg">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">Meet Bangalore’s</div>
+                    <div class="title">New King of <span class="highlight">Shawaya</span></div>
+                                       <div class="author">  <p>Indian Masala Shawaya</p></div>
 
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
+    <a href="https://www.swiggy.com" target="_blank" class="btn swiggy">ORDER ON SWIGGY</a>
+    <a href="https://www.zomato.com" target="_blank" class="btn zomato">ORDER ON ZOMATO</a>
+</div>
+
+
                 </div>
             </div>
             <div class="item">
-                <img src="assets/images/arabic.jpg">
+                <img src="assets/images/w4.jpg">
                 <div class="content">
-                    <div class="author">LUNDEV</div>
+                    <div class="author">Meet Bangalore’s</div>
+                    <div class="title">New King of <span class="highlight">Shawaya</span></div>
+                                       <div class="author">  <p>Indian Masala Shawaya</p></div>
 
                     <div class="buttons">
-                        <button>SEE MORE</button>
-                        <button>SUBSCRIBE</button>
-                    </div>
+    <a href="https://www.swiggy.com" target="_blank" class="btn swiggy">ORDER ON SWIGGY</a>
+    <a href="https://www.zomato.com" target="_blank" class="btn zomato">ORDER ON ZOMATO</a>
+</div>
+
+
                 </div>
             </div>
         </div>
         <!-- list thumnail -->
         <div class="thumbnail">
             <div class="item">
-                <img src="assets/images/indian.jpg">
+                <img src="assets/images/w1.jpg">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -383,18 +424,7 @@ header a{
                 </div>
             </div>
             <div class="item">
-              <img src="assets/images/korean.jpg" >
-               <div class="content">
-                    <div class="title">
-                        Name Slider
-                    </div>
-                    <div class="description">
-                        Description
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <img src="assets/images/jamaica.jpg">
+                <img src="assets/images/w2.jpg">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -405,7 +435,18 @@ header a{
                 </div>
             </div>
             <div class="item">
-                <img src="assets/images/arabic.jpg">
+                <img src="assets/images/w3.jpg">
+                <div class="content">
+                    <div class="title">
+                        Name Slider
+                    </div>
+                    <div class="description">
+                        Description
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="assets/images/w4.jpg">
                 <div class="content">
                     <div class="title">
                         Name Slider
@@ -425,9 +466,8 @@ header a{
         <!-- time running -->
         <div class="time"></div>
     </div>
-
-    <script >
-        //step 1: get DOM
+<script>
+    //step 1: get DOM
 let nextDom = document.getElementById('next');
 let prevDom = document.getElementById('prev');
 
@@ -439,7 +479,7 @@ let timeDom = document.querySelector('.carousel .time');
 
 thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 let timeRunning = 3000;
-let timeAutoNext = 7000;
+let timeAutoNext = 3000;
 
 nextDom.onclick = function(){
     showSlider('next');
@@ -476,6 +516,312 @@ function showSlider(type){
         next.click();
     }, timeAutoNext)
 }
-    </script>
-</body>
-</html>
+</script>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #eee;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ================= CAROUSEL ================= */
+.carousel-wrapper {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full viewport height */
+    overflow: hidden;
+}
+
+/* overlay */
+.carousel-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5); /* adjust opacity to 0.5~0.6 for readability */
+    z-index: 5; /* lower than content */
+    pointer-events: none;
+}
+
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+}
+
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel .list .item .content {
+    position: absolute;
+    z-index: 10; /* higher than overlay */
+    top: 35%; /* adjust for vertical centering */
+    left: 37%;
+    transform: translateX(-50%);
+    color: #fff;
+    text-align: left;
+    text-shadow: 0 10px 40px rgba(0,0,0,.7);
+}
+
+.carousel .list .item .author {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #f1683a;
+    margin-bottom: 12px;
+}
+
+.carousel .list .item .title {
+    font-size: 4.8rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 28px;
+}
+
+.carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 170px);
+    grid-template-rows: 48px;
+    gap: 16px;
+}
+
+.carousel .list .item .buttons .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 2px;
+    border-radius: 999px;
+    transition: all .35s ease;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(0,0,0,.4);
+}
+
+.carousel .list .item .buttons .swiggy {
+    background: linear-gradient(135deg, #fc8019, #ff9f45);
+    color: #000;
+}
+
+.carousel .list .item .buttons .swiggy:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(252,128,25,.6);
+}
+
+.carousel .list .item .buttons .zomato {
+    background: transparent;
+    border: 2px solid #e23744;
+    color: #fff;
+}
+
+.carousel .list .item .buttons .zomato:hover {
+    background: #e23744;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(226,55,68,.6);
+}
+
+/* thumbnails */
+.thumbnail {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* arrows */
+.arrows {
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+}
+
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff30;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.arrows button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1) {
+    z-index: 1;
+}
+
+.carousel .list .item:nth-child(1) .author,
+.carousel .list .item:nth-child(1) .title,
+.carousel .list .item:nth-child(1) .buttons {
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .6s 1s linear forwards;
+}
+
+@keyframes showContent {
+    to {
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
+/* COMMON BUTTON STYLING */
+.buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* SWIGGY BUTTON */
+.buttons .swiggy {
+    background: linear-gradient(135deg, #fc8019, #ff9f45);
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.buttons .swiggy:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(252,128,25,0.6);
+}
+
+/* ZOMATO BUTTON */
+.buttons .zomato {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #e23744;
+}
+
+.buttons .zomato:hover {
+    background: #e23744;
+    color: #fff;
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 12px 25px rgba(226,55,68,0.6);
+}
+
+/* ================= RESPONIVE ================= */
+@media screen and (max-width: 678px) {
+    .carousel {
+        height: 95vh; /* reduce carousel height on mobile */
+    }
+
+    .carousel .list .item .content {
+        top: 40%; /* adjust vertical centering for mobile */
+        padding-right: 0;
+    }
+
+    .carousel .list .item .title {
+        font-size: 2.8rem;
+    }
+
+    .carousel .list .item .buttons {
+        grid-template-columns: 1fr;
+        width: 220px;
+    }
+
+    .thumbnail {
+        bottom: 15px;
+        gap: 8px;
+    }
+
+    .thumbnail .item {
+        width: 70px;
+        height: 100px;
+    }
+
+    .thumbnail .item img {
+        border-radius: 12px;
+    }
+
+    .buttons .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel .list .item .content {
+        top: 30%;
+    }
+
+    .thumbnail {
+        bottom: 20px;
+        gap: 10px;
+    }
+
+    .thumbnail .item {
+        width: 90px;
+        height: 130px;
+    }
+
+    .thumbnail .item img {
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnail .item {
+        width: 75px;
+        height: 110px;
+    }
+}
+
+
+
+

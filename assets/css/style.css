@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
 
 body {
     margin: 0;
@@ -13,24 +13,11 @@ a {
 }
 
 /* ================= CAROUSEL ================= */
-.carousel-wrapper {
-    position: relative;
-}
-
 .carousel {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* full viewport height */
+    height: 110vh;
+    width: 100vw;
     overflow: hidden;
-}
-
-/* overlay */
-.carousel-overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0,0,0,0.5); /* adjust opacity to 0.5~0.6 for readability */
-    z-index: 5; /* lower than content */
-    pointer-events: none;
+    position: relative;
 }
 
 .carousel .list .item {
@@ -46,82 +33,82 @@ a {
     object-fit: cover;
 }
 
+/* ================= CONTENT ================= */
 .carousel .list .item .content {
     position: absolute;
-    z-index: 10; /* higher than overlay */
-    top: 35%; /* adjust for vertical centering */
-    left: 37%;
+    top: 26%;
+    width: 1140px;
+    max-width: 90%;
+    left: 50%;
     transform: translateX(-50%);
+    box-sizing: border-box;
     color: #fff;
-    text-align: left;
-    text-shadow: 0 10px 40px rgba(0,0,0,.7);
+    text-shadow: 0 5px 10px #0004;
 }
 
 .carousel .list .item .author {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-    color: #f1683a;
-    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 14px;
+    opacity: 0.9;
 }
 
 .carousel .list .item .title {
-    font-size: 4.8rem;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 28px;
+    font-size: clamp(2.2rem, 5vw, 4.5rem);
+    font-weight: bold;
+    line-height: 1.3em;
 }
 
 .carousel .list .item .buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 170px);
-    grid-template-rows: 48px;
-    gap: 16px;
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
 }
 
-.carousel .list .item .buttons .btn {
+/* ================= BUTTONS ================= */
+.carousel .buttons .btn {
+    height: 45px;
+    padding: 0 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
     font-size: 12px;
     letter-spacing: 2px;
-    border-radius: 999px;
-    transition: all .35s ease;
-    cursor: pointer;
-    box-shadow: 0 8px 30px rgba(0,0,0,.4);
+    font-weight: 600;
+    border-radius: 30px;
+    transition: 0.3s ease;
 }
 
-.carousel .list .item .buttons .swiggy {
+/* SWIGGY */
+.buttons .swiggy {
     background: linear-gradient(135deg, #fc8019, #ff9f45);
     color: #000;
 }
 
-.carousel .list .item .buttons .swiggy:hover {
+.buttons .swiggy:hover {
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(252,128,25,.6);
+    box-shadow: 0 12px 25px rgba(252,128,25,0.6);
 }
 
-.carousel .list .item .buttons .zomato {
+/* ZOMATO */
+.buttons .zomato {
     background: transparent;
-    border: 2px solid #e23744;
     color: #fff;
+    border: 2px solid #e23744;
 }
 
-.carousel .list .item .buttons .zomato:hover {
+.buttons .zomato:hover {
     background: #e23744;
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(226,55,68,.6);
+    box-shadow: 0 12px 25px rgba(226,55,68,0.6);
 }
 
-/* thumbnails */
+/* ================= THUMBNAILS ================= */
 .thumbnail {
     position: absolute;
     bottom: 50px;
-    left: 50%;
-    width: max-content;
+    right: 6%;
     z-index: 100;
     display: flex;
     gap: 20px;
@@ -131,7 +118,6 @@ a {
     width: 150px;
     height: 220px;
     flex-shrink: 0;
-    position: relative;
 }
 
 .thumbnail .item img {
@@ -141,14 +127,13 @@ a {
     border-radius: 20px;
 }
 
-/* arrows */
+/* ================= ARROWS ================= */
 .arrows {
     position: absolute;
-    top: 80%;
-    right: 52%;
+    top: 82%;
+    left: 40%;
+    transform: translateX(-50%);
     z-index: 100;
-    width: 300px;
-    max-width: 30%;
     display: flex;
     gap: 10px;
 }
@@ -157,12 +142,11 @@ a {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #ffffff30;
+    background-color: #eee4;
     border: none;
     color: #fff;
-    font-family: monospace;
     font-weight: bold;
-    transition: .3s;
+    transition: 0.5s;
 }
 
 .arrows button:hover {
@@ -170,18 +154,16 @@ a {
     color: #000;
 }
 
-/* animation */
+/* ================= ANIMATIONS ================= */
 .carousel .list .item:nth-child(1) {
     z-index: 1;
 }
 
-.carousel .list .item:nth-child(1) .author,
-.carousel .list .item:nth-child(1) .title,
-.carousel .list .item:nth-child(1) .buttons {
+.carousel .list .item:nth-child(1) .content * {
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
-    animation: showContent .6s 1s linear forwards;
+    animation: showContent 0.5s 1s forwards;
 }
 
 @keyframes showContent {
@@ -192,97 +174,103 @@ a {
     }
 }
 
-/* COMMON BUTTON STYLING */
-.buttons .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 28px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-radius: 50px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+/* ================= NEXT / PREV ================= */
+.carousel.next .list .item:nth-child(1) img {
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s forwards;
 }
 
-/* SWIGGY BUTTON */
-.buttons .swiggy {
-    background: linear-gradient(135deg, #fc8019, #ff9f45);
-    color: #000;
-    border: 2px solid transparent;
-}
-
-.buttons .swiggy:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(252,128,25,0.6);
-}
-
-/* ZOMATO BUTTON */
-.buttons .zomato {
-    background: transparent;
-    color: #fff;
-    border: 2px solid #e23744;
-}
-
-.buttons .zomato:hover {
-    background: #e23744;
-    color: #fff;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 12px 25px rgba(226,55,68,0.6);
-}
-
-/* ================= RESPONIVE ================= */
-@media screen and (max-width: 678px) {
-    .carousel {
-        height: 95vh; /* reduce carousel height on mobile */
+@keyframes showImage {
+    to {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
     }
+}
 
+.carousel.prev .list .item:nth-child(2) img {
+    animation: outFrame .5s forwards;
+}
+
+@keyframes outFrame {
+    to {
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+/* CONTENT OUT */
+.carousel.prev .list .item:nth-child(2) .content * {
+    animation: contentOut 1.5s forwards !important;
+}
+
+@keyframes contentOut {
+    to {
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+/* ================= PROGRESS BAR ================= */
+.carousel .time {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: #f1683a;
+}
+
+.carousel.next .time,
+.carousel.prev .time {
+    animation: runningTime 3s linear forwards;
+}
+
+@keyframes runningTime {
+    from { width: 100%; }
+    to { width: 0; }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* TEXT LEFT */
     .carousel .list .item .content {
-        top: 40%; /* adjust vertical centering for mobile */
-        padding-right: 0;
-    }
-
-    .carousel .list .item .title {
-        font-size: 2.8rem;
+        top: 30%;
+        left: 6%;
+        transform: none;
+        max-width: 88%;
+        text-align: left;
     }
 
     .carousel .list .item .buttons {
-        grid-template-columns: 1fr;
-        width: 220px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
     }
 
-    .thumbnail {
-        bottom: 15px;
-        gap: 8px;
-    }
-
-    .thumbnail .item {
-        width: 70px;
-        height: 100px;
-    }
-
-    .thumbnail .item img {
-        border-radius: 12px;
-    }
-
-    .buttons .btn {
-        padding: 10px 20px;
-        font-size: 12px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel .list .item .content {
-        top: 30%;
-    }
-
+    /* THUMBNAILS – OFF-CENTER RIGHT (INTENTIONAL) */
     .thumbnail {
         bottom: 20px;
-        gap: 10px;
+        right: -64%;       /* ✔ intentional offset */
+        left: auto;
+        transform: none;
+        display: flex;
+        gap: 12px;
+        max-width: 140vw; /* stabilizes scrolling */
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding-left: 10px;
     }
 
     .thumbnail .item {
@@ -290,14 +278,11 @@ a {
         height: 130px;
     }
 
-    .thumbnail .item img {
-        border-radius: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .thumbnail .item {
-        width: 75px;
-        height: 110px;
+    /* ARROWS */
+    .arrows {
+        bottom: 140px;
+        top: 85%;
+        left: 40%;
+        transform: translateX(-50%);
     }
 }
