@@ -303,3 +303,37 @@ a {
     animation: none !important;
     transition: none !important;
 }
+
+
+
+
+
+
+
+.animated-badge {
+  width: 96px;
+  height: 96px;
+  position: relative;
+}
+
+.badge-text {
+  z-index: 2; /* keep text above SVG shapes */
+}
+
+svg {
+  overflow: visible !important;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bubbles {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
