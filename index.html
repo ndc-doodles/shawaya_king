@@ -1485,7 +1485,7 @@ document.querySelectorAll('svg#organic-blob').forEach(svg => {
   // WhatsApp number (without +)
   const number = "919972736029";
 
-  // Messages for each button (completely clean)
+  // Messages for each button (clean, plain list)
   const messages = {
     whatsapp1: `Hi,
 
@@ -1496,10 +1496,10 @@ Shawaya Full
 (4 To 5 Persons)
 
 Includes:
-- Full Chicken
-- Veg Salad
-- Mayonnaise
-- 2 Breads
+Full Chicken
+Veg Salad
+Mayonnaise
+2 Breads
 
 Total: ₹570`,
 
@@ -1512,10 +1512,10 @@ Shawaya Full
 (4 To 5 Persons)
 
 Includes:
-- Full Chicken
-- Veg Salad
-- Mayonnaise
-- 2 Breads
+Full Chicken
+Veg Salad
+Mayonnaise
+2 Breads
 
 Total: ₹550`,
 
@@ -1528,10 +1528,10 @@ Shawaya Full
 (4 To 5 Persons)
 
 Includes:
-- Full Chicken
-- Veg Salad
-- Mayonnaise
-- 2 Breads
+Full Chicken
+Veg Salad
+Mayonnaise
+2 Breads
 
 Total: ₹580`,
 
@@ -1544,28 +1544,22 @@ Shawaya Full
 (4 To 5 Persons)
 
 Includes:
-- Full Chicken
-- Veg Salad
-- Mayonnaise
-- 2 Breads
+Full Chicken
+Veg Salad
+Mayonnaise
+2 Breads
 
 Total: ₹575`
   };
 
-  // Function to set WhatsApp href dynamically
-  function setWhatsAppButton(id, message) {
-    const btn = document.getElementById(id);
-    if (btn && message) {
-      btn.href = `https://wa.me/${number}?text=${encodeURIComponent(message.trim())}`;
-    }
-  }
-
-  // Apply messages to all buttons
+  // Function to dynamically set WhatsApp href for each button
   Object.keys(messages).forEach(id => {
-    setWhatsAppButton(id, messages[id]);
+    const btn = document.getElementById(id);
+    if (btn && messages[id]) {
+      btn.href = `https://wa.me/${number}?text=${encodeURIComponent(messages[id].trim())}`;
+    }
   });
 </script>
-
 
 
 
